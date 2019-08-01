@@ -15,8 +15,8 @@ class CreateAngsuransTable extends Migration
     {
         Schema::create('angsurans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('kategori_pinjamens_id');
-            $table->integer('anggotas_id');
+            $table->unsignedBigInteger('kategori_pinjamens_id');
+            $table->unsignedBigInteger('anggotas_id');
             $table->date('tgl_pembayaran');
             $table->integer('angsuran_ke');
             $table->integer('besar_angsuran');
