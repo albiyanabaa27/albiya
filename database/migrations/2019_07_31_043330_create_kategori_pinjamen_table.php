@@ -15,6 +15,7 @@ class CreateKategoriPinjamenTable extends Migration
     {
         Schema::create('kategori_pinjamen', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama_pinjaman');
             $table->timestamps();
         });
     }

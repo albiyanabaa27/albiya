@@ -16,13 +16,13 @@ class CreatePinjamannsTable extends Migration
         Schema::create('pinjamanns', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_pinjaman');
-            $table->bigIncrements('anggotas_id');
+            $table->integer('anggotas_id');
             $table->integer('besar_pinjaman');
             $table->date('tgl_pengajuan_pinjaman');
             $table->date('tgl_acc_pinjaman');
             $table->date('tgl_pinjaman');
             $table->date('tgl_pelunasan');
-            $table->bigIncrements('angsurans_id');
+            $table->integer('angsurans_id');
             $table->timestamps();
         });
     }

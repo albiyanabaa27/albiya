@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAngsuransTable extends Migration
+class CreateDetailAngsuransTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class CreateAngsuransTable extends Migration
      */
     public function up()
     {
-        Schema::create('angsurans', function (Blueprint $table) {
+        Schema::create('detail_angsurans', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('kategori_pinjamens_id');
-            $table->integer('anggotas_id');
-            $table->date('tgl_pembayaran');
-            $table->integer('angsuran_ke');
+            $table->date('tgl_jatuh_tempo');
             $table->integer('besar_angsuran');
             $table->timestamps();
         });
@@ -31,6 +28,6 @@ class CreateAngsuransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('angsurans');
+        Schema::dropIfExists('detail_angsurans');
     }
 }
