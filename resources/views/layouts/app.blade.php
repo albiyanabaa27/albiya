@@ -25,19 +25,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                    @guest
-                    @else
-                    <li class="nav-item">
-                                <a class="nav-link" href="/">Menu1</a>
-                            </li>
-                    <li class="nav-item">
-                                <a class="nav-link" href="/">Menu2</a>
-                            </li>
-                    <li class="nav-item">
-                                <a class="nav-link" href="/">Menu3</a>
-                            </li>
-
-                    @endguest
+                
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -45,6 +33,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
+
+                     @guest
+                    @else
+                    <li class="nav-item">
+                                <a class="nav-link" href="#">Menu1</a>
+                            </li>
+                    <li class="nav-item">
+                                <a class="nav-link" href="#">Menu2</a>
+                            </li>
+                    <li class="nav-item">
+                                <a class="nav-link" href="#">Menu3</a>
+                            </li>
+
+                    @endguest
 
                     </ul>
 
