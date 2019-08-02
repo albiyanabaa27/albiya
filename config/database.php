@@ -49,7 +49,7 @@ return [
             'host' => env('DB_HOST', 'db4free.net'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'ujikomrpl'),
-            'username' => env('DB_USERNAME', 'albiyanaba123'),
+            'username' => env('DB_USERNAME', 'albiyanaba1933'),
             'password' => env('DB_PASSWORD', 'albiyajagocoding123'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
