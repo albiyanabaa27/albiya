@@ -35,18 +35,19 @@
                     <ul class="navbar-nav mr-auto">
 
                      @guest
-                    @auth
+                    @else
+                    @role('admin')
                     <li class="nav-item">
-                                <a class="nav-link" href="#">Menu (diwajibkan role Auth super admin)</a>
+                                <a class="nav-link" href="#">super admin</a>
                             </li>
                     <li class="nav-item">
-                                <a class="nav-link" href="#">Menu (diwajibkan role auth admin) </a>
+                                <a class="nav-link" href="#">admin</a>
                             </li>
                     <li class="nav-item">
-                                <a class="nav-link" href="#">Menu (diwajibkan role auth user)</a>
+                                <a class="nav-link" href="#">user</a>
                             </li>
                             
-                    @endauth
+                    @endrole
                     @endguest
 
                     </ul>
